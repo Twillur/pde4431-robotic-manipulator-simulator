@@ -3,8 +3,6 @@
 
 **Module:** PDE4431  
 **Coursework:** 2  
-**Location:** Dubai  
-**Deadline:** December 11th, 2025 (23:59 Dubai Time)
 
 ---
 
