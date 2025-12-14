@@ -130,7 +130,7 @@ Inverse kinematics calculations were performed to determine joint values require
 
 📌 **Inverse kinematics calculation results:**
 
-![IK Results](crates_increment_screenshot.png)
+![IK Results](Kinematics_calculations_crate1.png)
 
 📌 **Actual end-effector position verification:**
 
