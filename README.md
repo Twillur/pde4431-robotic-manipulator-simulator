@@ -86,17 +86,19 @@ The full motion is smoothly animated, demonstrating reachability and joint coord
 
 ---
 
+---
+
 ## Demonstration Video
 
-A full video demonstration of the simulation, including the complete pick-and-place animation sequence, joint motion, and verification of reachability, is available at the link below:
+A full video demonstration of the simulation, including the complete pick-and-place animation sequence, joint motion, and verification of reachability, is available on YouTube:  
 
-▶ **YouTube Video:**  
-https://www.youtube.com/watch?v=dRLnpr6hyPs
+[![Pick-and-Place Simulation Demo](https://img.youtube.com/vi/dRLnpr6hyPs/0.jpg)](https://www.youtube.com/watch?v=dRLnpr6hyPs)  
+*Click the image to view the video.*  
 
-The video clearly shows:
-- The robot picking up each crate from the floor
-- Placement on the correct shelf level
-- Smooth joint transitions and coordinated motion
+The video clearly shows:  
+- The robot picking up each crate from the floor  
+- Placement on the correct shelf level  
+- Smooth joint transitions and coordinated motion  
 - Visual confirmation of end-effector accuracy
 
 ---
