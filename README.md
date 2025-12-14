@@ -153,18 +153,6 @@ As a result, minor differences may appear between calculated Z-values and displa
 
 ---
 
-## Assessment Criteria Coverage
-
-This project satisfies the **Distinction (1–4)** rubric criteria:
-
-- ✔ Appropriate D–H parameter selection  
-- ✔ Fully animated pick-and-place sequence  
-- ✔ Clear 3D visualisation with annotations  
-- ✔ Inverse kinematics implementation  
-- ✔ Independent enhancements beyond taught material  
-
----
-
 ## Conclusion
 
 This coursework demonstrates a complete and well-structured approach to **industrial manipulator kinematic modelling**. Through careful joint design, D–H parameterisation, and animated simulation, the robot successfully completes a multi-stage pick-and-place task entirely in software, validating the design prior to any physical implementation.
