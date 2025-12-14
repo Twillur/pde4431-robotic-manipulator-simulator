@@ -67,7 +67,7 @@ This configuration allows the manipulator to reach shelves at different heights 
 
 📌 **Initial setup of the simulation environment:**
 
-![Robot Setup](setup_image.png)  
+![Robot Setup](Setup_Image.png)  
 *(Insert image of setup)*
 
 ---
