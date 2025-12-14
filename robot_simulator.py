@@ -95,6 +95,7 @@ class PDE4431_Coursework2:
         self.plot_crates()
         self.plot_shelves()
         self.plot_robot()
+        self.show_dh_table()
         self.show_transformation_calculations()
         self.fig.canvas.draw_idle()
     
@@ -235,6 +236,51 @@ class PDE4431_Coursework2:
             [0, 0, 0, 1]
         ])
         return T
+
+    def show_dh_table(self):
+        dh_text = "DENAVIT-HARTENBERG PARAMETERS\n"
+        dh_text += "═" * 55 + "\n"
+        dh_text += " Joint |   a (m)  |   α (°)  |   d (m)  |   θ (°)  \n"
+        dh_text += "───────┼──────────┼──────────┼──────────┼──────────\n"
+        
+        dh_params = [
+            ("J1", 0.0, 0.0, f"{self.joints[0]:.3f}", 0.0),
+            ("J2", self.L1, 90.0, 0.0, f"{np.degrees(self.joints[1]):.1f}"),
+            ("J3", self.L2, 0.0, 0.0, f"{np.degrees(self.joints[2]):.1f}"),
+            ("J4", self.L3, 0.0, 0.0, f"{np.degrees(self.joints[3]):.1f}")
+        ]
+        
+        for joint_name, a, alpha, d, theta in dh_params:
+            if isinstance(alpha, float):
+                alpha_str = f"{alpha:>7.1f}"
+            else:
+                alpha_str = f"{alpha:>7}"
+                
+            if isinstance(theta, float):
+                theta_str = f"{theta:>7.1f}"
+            else:
+                theta_str = f"{theta:>7}"
+                
+            dh_text += f"  {joint_name:4} |  {a:5.3f}   | {alpha_str}  |  {d:5}   | {theta_str}  \n"
+        
+        dh_text += "\nDH Transformation Matrix (Tᵢ):\n"
+        dh_text += "⎡ cosθᵢ   -sinθᵢ·cosαᵢ   sinθᵢ·sinαᵢ   aᵢ·cosθᵢ ⎤\n"
+        dh_text += "⎢ sinθᵢ    cosθᵢ·cosαᵢ  -cosθᵢ·sinαᵢ   aᵢ·sinθᵢ ⎥\n"
+        dh_text += "⎣   0         sinαᵢ         cosαᵢ         dᵢ    ⎦\n"
+        
+        dh_box = self.ax.text2D(-0.56, 0.30, dh_text,
+                               transform=self.ax.transAxes,
+                               fontsize=8.5,
+                               family='monospace',
+                               bbox=dict(boxstyle="round,pad=0.4", 
+                                       facecolor="lavenderblush", 
+                                       alpha=0.95,
+                                       edgecolor='purple',
+                                       linewidth=1.5),
+                               verticalalignment='top',
+                               horizontalalignment='left')
+        
+        return dh_box
     
     def plot_robot(self):
         positions = self.forward_kinematics(self.joints)
