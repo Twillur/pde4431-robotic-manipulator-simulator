@@ -86,6 +86,21 @@ The full motion is smoothly animated, demonstrating reachability and joint coord
 
 ---
 
+## Demonstration Video
+
+A full video demonstration of the simulation, including the complete pick-and-place animation sequence, joint motion, and verification of reachability, is available at the link below:
+
+▶ **YouTube Video:**  
+https://www.youtube.com/watch?v=dRLnpr6hyPs
+
+The video clearly shows:
+- The robot picking up each crate from the floor
+- Placement on the correct shelf level
+- Smooth joint transitions and coordinated motion
+- Visual confirmation of end-effector accuracy
+
+---
+
 ## Denavit–Hartenberg (D–H) Parameters
 
 To formally define the robot geometry, **Denavit–Hartenberg parameters** are used. These parameters serve as the kinematic input to the Python simulation and define:
